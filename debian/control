@@ -1,0 +1,38 @@
+Source: openvanilla-modules
+Section: libs
+Priority: optional
+Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Uploaders: Aron Xu <happyaron.xu@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev, quilt (>= 0.46-7~), libtool
+Standards-Version: 3.8.4
+Homepage: http://code.google.com/p/openvanilla
+
+Package: libopenvanilla
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libraries of openvanilla input method
+ OpenVanilla is a collection of popular CJK and symbol input methods 
+ and language tools. 
+ .
+ This package contains openvanilla's library files.
+
+Package: libopenvanilla-data
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenvanilla (>= ${binary:Version})
+Description: libraries of openvanilla input method - data files
+ OpenVanilla is a collection of popular CJK and symbol input methods 
+ and language tools. 
+ .
+ This package contains openvanilla's library data files.
+
+Package: libopenvanilla-dev
+Section: libdevel
+Architecture: any
+Conflicts: libopenvanilla-dev
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenvanilla (= ${binary:Version})
+Description: libraries of openvanilla input method - development files
+ OpenVanilla is a collection of popular CJK and symbol input methods 
+ and language tools. 
+ .
+ This package contains openvanilla's library development files.
+

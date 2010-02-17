@@ -1,0 +1,5 @@
+openvanilla-modules (0.8.0.14+dfsg1-1) unstable; urgency=low
+
+  * Initial release (Closes: #570200) 
+
+ -- Aron Xu <happyaron.xu@gmail.com>  Wed, 17 Feb 2010 16:00:45 +0800

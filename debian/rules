@@ -1,0 +1,48 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+version=0.8.0.14
+major=0.8.0_14
+repackv=1
+
+%:
+	dh  $@ --with quilt
+	
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		--libdir=/usr/lib/ \
+		--enable-asia \
+		--enable-th_TH \
+		--enable-vi_VN \
+		--enable-jp_JP \
+		--enable-ko_KR \
+		--enable-zh_CN \
+		--enable-zh_HK \
+		--enable-zh_TW \
+		--enable-zh_TW_hakka \
+		--enable-zh_TW_taigi
+
+override_dh_makeshlibs:
+
+get-orig-source:
+	mkdir ../repack
+	uscan --force-download --destdir ../repack --download-current-version
+	( \
+		cd ../repack ;\
+		tar zxf openvanilla-modules-$(major).tar.gz ;\
+		cd openvanilla-modules-$(major) ;\
+		rm -rf OVIMGeneric/dayi3.cin OVIMGeneric/tp_hakka_hl.cin OVIMGeneric/tp_hakka_tl.cin OVIMGeneric/tp_hakka_sy.cin SharedData/dayi3.cin ;\
+		cd .. ;\
+		mv openvanilla-modules-$(major) openvanilla-modules-$(version) ;\
+		GZIP="--best" tar -czf openvanilla-modules_$(version)+dfsg$(repackv).orig.tar.gz openvanilla-modules-$(version) ;\
+		mv openvanilla-modules_$(version)+dfsg$(repackv).orig.tar.gz .. ;\
+	)
+	rm -rf ../repack
+

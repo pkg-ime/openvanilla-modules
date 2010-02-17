@@ -1,0 +1,9 @@
+openvanilla-modules for Debian
+------------------------------
+The following files from orignal tarball does not meet dfsg and has been 
+removed:
+OVIMGeneric/dayi3.cin and SharedData/dayi3.cin -- Da Yi License which does not 
+grant full freedom of redistribution of the data.
+OVIMGeneric/tp_hakka_hl.cin, OVIMGeneric/tp_hakka_tl.cin and OVIMGeneric/tp_hakka_sy.cin -- CC BY-NC-SA
+
+ -- Aron Xu <happyaron.xu@gmail.com>  Mon, 22 Mar 2010 18:29:42 +0800
