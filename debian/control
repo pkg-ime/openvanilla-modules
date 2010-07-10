@@ -1,38 +1,108 @@
 Source: openvanilla-modules
-Section: libs
+Section: utils
 Priority: optional
 Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
 Uploaders: Aron Xu <happyaron.xu@gmail.com>
 Build-Depends: debhelper (>= 7.0.50~), autotools-dev, quilt (>= 0.46-7~), libtool
-Standards-Version: 3.8.4
-Homepage: http://code.google.com/p/openvanilla
+Standards-Version: 3.9.0
+Homepage: http://code.google.com/p/ucimf
 
-Package: libopenvanilla
+Package: openvanilla-imgeneric
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: openvanilla-imgeneric-data-all | openvanilla-imgeneric-data-zh-tw | openvanilla-imgeneric-data-zh-cn | openvanilla-imgeneric-data-zh-hk | openvanilla-imgeneric-data-ja | openvanilla-imgeneric-data-ko | openvanilla-imgeneric-data-th | openvanilla-imgeneric-data-vi
+Conflicts: libopenvanilla, libopenvanilla-data, libopenvanilla-dev
+Replaces: libopenvanilla, libopenvanilla-data, libopenvanilla-dev
 Description: libraries of openvanilla input method
  OpenVanilla is a collection of popular CJK and symbol input methods 
  and language tools. 
  .
  This package contains openvanilla's library files.
 
-Package: libopenvanilla-data
+Package: openvanilla-imgeneric-data-ja
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, libopenvanilla (>= ${binary:Version})
-Description: libraries of openvanilla input method - data files
+Depends: ${shlibs:Depends}, ${misc:Depends}, openvanilla-imgeneric
+Conflicts: libopenvanilla-data
+Replaces: libopenvanilla-data
+Description: libraries of openvanilla input method - Japanese data files
  OpenVanilla is a collection of popular CJK and symbol input methods 
  and language tools. 
  .
- This package contains openvanilla's library data files.
+ This package contains openvanilla's Japanese data files.
 
-Package: libopenvanilla-dev
-Section: libdevel
-Architecture: any
-Conflicts: libopenvanilla-dev
-Depends: ${shlibs:Depends}, ${misc:Depends}, libopenvanilla (= ${binary:Version})
-Description: libraries of openvanilla input method - development files
+Package: openvanilla-imgeneric-data-ko
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openvanilla-imgeneric
+Conflicts: libopenvanilla-data
+Replaces: libopenvanilla-data
+Description: libraries of openvanilla input method - Korean data files
  OpenVanilla is a collection of popular CJK and symbol input methods 
  and language tools. 
  .
- This package contains openvanilla's library development files.
+ This package contains openvanilla's Korean data files.
 
+Package: openvanilla-imgeneric-data-th
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openvanilla-imgeneric
+Conflicts: libopenvanilla-data
+Replaces: libopenvanilla-data
+Description: libraries of openvanilla input method - Thai data files
+ OpenVanilla is a collection of popular CJK and symbol input methods 
+ and language tools. 
+ .
+ This package contains openvanilla's Thai data files.
+
+Package: openvanilla-imgeneric-data-vi
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openvanilla-imgeneric
+Conflicts: libopenvanilla-data
+Replaces: libopenvanilla-data
+Description: libraries of openvanilla input method - Vietnamese data files
+ OpenVanilla is a collection of popular CJK and symbol input methods 
+ and language tools. 
+ .
+ This package contains openvanilla's Vietnamese data files.
+
+Package: openvanilla-imgeneric-data-zh-cn
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openvanilla-imgeneric
+Conflicts: libopenvanilla-data
+Replaces: libopenvanilla-data
+Description: libraries of openvanilla input method - Chinese (Simplified) data files
+ OpenVanilla is a collection of popular CJK and symbol input methods 
+ and language tools. 
+ .
+ This package contains openvanilla's Chinese (Simplified) data files.
+
+Package: openvanilla-imgeneric-data-zh-hk
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openvanilla-imgeneric
+Conflicts: libopenvanilla-data
+Replaces: libopenvanilla-data
+Description: libraries of openvanilla input method - Chinese (Hongkong) data files
+ OpenVanilla is a collection of popular CJK and symbol input methods 
+ and language tools. 
+ .
+ This package contains openvanilla's Chinese (Hongkong) data files.
+
+Package: openvanilla-imgeneric-data-zh-tw
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openvanilla-imgeneric
+Conflicts: libopenvanilla-data
+Replaces: libopenvanilla-data
+Description: libraries of openvanilla input method - Chinese (Traditional) data files
+ OpenVanilla is a collection of popular CJK and symbol input methods 
+ and language tools. 
+ .
+ This package contains openvanilla's Chinese (Traditional) data files.
+
+Package: openvanilla-imgeneric-data-all
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openvanilla-imgeneric-data-ja, openvanilla-imgeneric-data-ko, openvanilla-imgeneric-data-th, openvanilla-imgeneric-data-vi, openvanilla-imgeneric-data-zh-cn, openvanilla-imgeneric-data-zh-hk, openvanilla-imgeneric-data-zh-tw
+Conflicts: libopenvanilla-data
+Replaces: libopenvanilla-data
+Description: libraries of openvanilla input method - data files meta package
+ OpenVanilla is a collection of popular CJK and symbol input methods 
+ and language tools. 
+ .
+ This package pulls in openvanilla-imgeneric-data-* data files.

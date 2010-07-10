@@ -1,6 +1,6 @@
---- a/OVIMGeneric/Makefile.am
-+++ b/OVIMGeneric/Makefile.am
-@@ -57,7 +57,6 @@
+--- a/DataTables/Makefile.am
++++ b/DataTables/Makefile.am
+@@ -47,7 +47,6 @@
  cj5.cin \
  ckc.cin \
  dapu.cin \
@@ -8,11 +8,10 @@
  dna.cin \
  ez.cin \
  jinjin.cin \
-@@ -76,14 +75,10 @@
- dapu.cin \
+@@ -65,9 +64,7 @@
  hailu.cin \
  kks_hakka_henry.cin \
--kks_hakka_tl.cin \
+ kks_hakka_tl.cin \
 -sixian.cin \
 -tp_hakka_hl.cin \
 -tp_hakka_sy.cin
@@ -20,13 +19,9 @@
  
  CIN_zh_TW_taigi= \
  kks.cin \
--kks_hakka_tl.cin \
- kks_tl.cin \
- phofsi.cin \
- tlpa.cin
---- a/OVIMGeneric/Makefile.in
-+++ b/OVIMGeneric/Makefile.in
-@@ -250,7 +250,6 @@
+--- a/DataTables/Makefile.in
++++ b/DataTables/Makefile.in
+@@ -235,7 +235,6 @@
  cj5.cin \
  ckc.cin \
  dapu.cin \
@@ -34,11 +29,10 @@
  dna.cin \
  ez.cin \
  jinjin.cin \
-@@ -269,14 +268,10 @@
- dapu.cin \
+@@ -253,9 +252,7 @@
  hailu.cin \
  kks_hakka_henry.cin \
--kks_hakka_tl.cin \
+ kks_hakka_tl.cin \
 -sixian.cin \
 -tp_hakka_hl.cin \
 -tp_hakka_sy.cin
@@ -46,27 +40,3 @@
  
  CIN_zh_TW_taigi = \
  kks.cin \
--kks_hakka_tl.cin \
- kks_tl.cin \
- phofsi.cin \
- tlpa.cin
---- a/SharedData/Makefile.am
-+++ b/SharedData/Makefile.am
-@@ -2,7 +2,6 @@
- 	bpmf-ext.cin \
- 	bpmf.cin \
- 	cj.cin \
--	dayi3.cin \
- 	ehq-symbols.cin \
- 	pinyin.cin \
- 	punctuations.cin \
---- a/SharedData/Makefile.in
-+++ b/SharedData/Makefile.in
-@@ -162,7 +162,6 @@
- 	bpmf-ext.cin \
- 	bpmf.cin \
- 	cj.cin \
--	dayi3.cin \
- 	ehq-symbols.cin \
- 	pinyin.cin \
- 	punctuations.cin \

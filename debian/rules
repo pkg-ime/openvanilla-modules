@@ -8,8 +8,7 @@
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
-version=0.8.0.14
-major=0.8.0_14
+version=0.9.0a1.3
 repackv=1
 
 %:
@@ -18,11 +17,10 @@ repackv=1
 override_dh_auto_configure:
 	dh_auto_configure -- \
 		--libdir=/usr/lib/ \
-		--enable-asia \
-		--enable-th_TH \
-		--enable-vi_VN \
 		--enable-jp_JP \
 		--enable-ko_KR \
+		--enable-th_TH \
+		--enable-vi_VN \
 		--enable-zh_CN \
 		--enable-zh_HK \
 		--enable-zh_TW \
@@ -32,15 +30,15 @@ override_dh_auto_configure:
 override_dh_makeshlibs:
 
 get-orig-source:
+	rm -rf ../repack
 	mkdir ../repack
 	uscan --force-download --destdir ../repack --download-current-version
 	( \
 		cd ../repack ;\
-		tar zxf openvanilla-modules-$(major).tar.gz ;\
-		cd openvanilla-modules-$(major) ;\
-		rm -rf OVIMGeneric/dayi3.cin OVIMGeneric/tp_hakka_hl.cin OVIMGeneric/tp_hakka_tl.cin OVIMGeneric/tp_hakka_sy.cin SharedData/dayi3.cin ;\
+		tar zxf openvanilla-modules-$(version).tar.gz ;\
+		cd openvanilla-modules-$(version) ;\
+		rm -rf DataTables/dayi3.cin DataTables/tp_hakka_hl.cin DataTables/tp_hakka_sy.cin ;\
 		cd .. ;\
-		mv openvanilla-modules-$(major) openvanilla-modules-$(version) ;\
 		GZIP="--best" tar -czf openvanilla-modules_$(version)+dfsg$(repackv).orig.tar.gz openvanilla-modules-$(version) ;\
 		mv openvanilla-modules_$(version)+dfsg$(repackv).orig.tar.gz .. ;\
 	)

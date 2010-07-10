@@ -1,3 +1,26 @@
+openvanilla-modules (0.9.0a1.3+dfsg1-1) unstable; urgency=low
+
+  * New upstream release:
+      Openvanilla upstream new alpha release,
+      Source tree and installation tree changes,
+      More features added.
+  * Resolve the package division problem (Closes: #587579)
+  * debian/control:
+      Change Section from libs to utils,
+      Change homepage to ucimf project,
+      Re-organize package division. 
+  * debian/rules: 
+      Small changes on override_dh_auto_configure to include all tables,
+      Adapt get-orig-source target to satisfy upstream version changes.
+  * debian/README.source:
+      Update dfsg removal information.
+  * debian/copyright: 
+      Update copyright information.
+  * debian/watch:
+      Update variables to fit upstream package name change.
+
+ -- Aron Xu <happyaron.xu@gmail.com>  Sun, 11 Jul 2010 01:27:51 +0800
+
 openvanilla-modules (0.8.0.14+dfsg1-1) unstable; urgency=low
 
   * Initial release (Closes: #570200) 
