@@ -1,1 +1,1 @@
-usr/lib/openvanilla/
+usr/lib/openvanilla/*.{a,so}
