@@ -1,3 +1,14 @@
+openvanilla-modules (0.9.1+dfsg1-1) maverick; urgency=low
+
+  * New upstream release.
+  * Change to @debian.org address.
+  * Acknowledge NMU: Closes: #622485
+  * Ship input methods based on tables, not language.
+  * Std-ver: 3.9.2
+  * debian/compat: 8
+
+ -- Aron Xu <aron@debian.org>  Wed, 26 Oct 2011 01:31:49 +0800
+
 openvanilla-modules (0.9.0a1.3+dfsg1-2.1) unstable; urgency=low
 
   * Non-maintainer upload.

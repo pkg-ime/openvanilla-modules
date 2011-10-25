@@ -1,0 +1,49 @@
+--- a/DataTables/Makefile.am
++++ b/DataTables/Makefile.am
+@@ -36,7 +36,6 @@
+ 
+ CIN_zh_TW= \
+ cangjie.cin \
+-uniliu.cin \
+ simplecj.cin \
+ 3corner.cin \
+ 4corner.cin \
+@@ -46,12 +45,10 @@
+ cj.cin \
+ cj5.cin \
+ ckc.cin \
+-dayi3.cin \
+ dna.cin \
+ ez.cin \
+ jinjin.cin \
+ jsm.cin \
+-jtcj.cin \
+ newcj.cin \
+ newcj3.cin \
+ roman.cin \
+@@ -65,9 +62,7 @@
+ hailu.cin \
+ kks_hakka_henry.cin \
+ kks_hakka_tl.cin \
+-sixian.cin \
+-tp_hakka_hl.cin \
+-tp_hakka_sy.cin
++sixian.cin
+ 
+ CIN_zh_TW_taigi= \
+ kks.cin \
+@@ -82,7 +77,7 @@
+ $(CIN_vi_VN) \
+ pinyin.cin  pinyin0.cin  shuangpin.cin  wubizixing2.cin \
+ $(CIN_zh_HK) \
+-cangjie.cin  uniliu.cin  array40.cin 
++uniliu.cin  array40.cin 
+ 
+ if WITH_jp_JP
+ cin_jp_JP = $(CIN_jp_JP)
+@@ -150,5 +145,3 @@
+ $(CIN_zh_TW_hakka) \
+ $(CIN_zh_TW_taigi) \
+ $(CIN_asia)
+-		 
+-
