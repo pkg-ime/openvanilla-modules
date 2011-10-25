@@ -43,11 +43,9 @@ simplecj.cin \
 4corner5.cin \
 array30.cin \
 array40.cin \
-cangjie.cin \
 cj.cin \
 cj5.cin \
 ckc.cin \
-dapu.cin \
 dayi3.cin \
 dna.cin \
 ez.cin \
@@ -60,7 +58,6 @@ roman.cin \
 scj62.cin \
 simplex.cin \
 simplex5.cin \
-uniliu.cin \
 wu.cin 
 
 CIN_zh_TW_hakka= \
@@ -74,7 +71,6 @@ tp_hakka_sy.cin
 
 CIN_zh_TW_taigi= \
 kks.cin \
-kks_hakka_tl.cin \
 kks_tl.cin \
 phofsi.cin \
 tlpa.cin
