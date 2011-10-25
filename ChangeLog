@@ -1,0 +1,23 @@
+2009-10-17  Mat <matlinuxer2@gmail.com>
+
+	* OVIMGeneric/OVIMGeneric.cpp
+	* SharedSource/OVCINInfo.cpp
+	* SharedSource/OVCandidateList.cpp
+
+	  fix compilation error for missing <stdio.h>
+
+2009-06-24  Mat <matlinuxer2@gmail.com>
+
+	* OVIMGeneric/OVIMGeneric.cpp:
+	  Reset buffer automatically when composing to nothing.
+
+2009-03-24  Mat <matlinuxer2@gmail.com>
+
+	* OVIMGeneric/Makefile.am:
+	  Adopt oahong's patch for correct libdir setting under x86_64.
+	  Thanks oahong.
+
+2009-03-21  Mat <matlinuxer2@gmail.com>
+
+	* Add --with-{languages} to configure different input methods set.
+
