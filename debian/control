@@ -6,6 +6,8 @@ Uploaders: Aron Xu <aron@debian.org>
 Build-Depends: debhelper (>= 8), autotools-dev, libtool, dh-autoreconf
 Standards-Version: 3.9.2
 Homepage: http://code.google.com/p/ucimf
+Vcs-Git: git://git.debian.org/pkg-ime/openvanilla-modules.git
+Vcs-Browser: http://git.debian.org/?p=pkg-ime/openvanilla-modules.git
 
 Package: openvanilla-imgeneric
 Architecture: any
